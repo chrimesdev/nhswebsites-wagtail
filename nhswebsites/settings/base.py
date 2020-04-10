@@ -28,9 +28,11 @@ INSTALLED_APPS = [
     'search',
 
     'wagtailnhsukfrontend',
+    'wagtailnhsukfrontend.settings',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.settings',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
