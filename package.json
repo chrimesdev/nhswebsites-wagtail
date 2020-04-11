@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:css": "node-sass --output-style compressed nhswebsites/static_src/scss/main.scss nhswebsites/static/css/main.min.css",
-    "test": "npm test",
+    "test": "npm run lint:css",
+    "lint:css": "sass-lint 'nhswebsites/static_src/scss/**/*.scss' -v -q",
     "watch:scss": "npm run build:css -- -w"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/AdamChrimes/nhswebsites-wagtail#readme",
   "devDependencies": {
     "nhsuk-frontend": "^3.0.4",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "sass-lint": "^1.13.1"
   }
 }
