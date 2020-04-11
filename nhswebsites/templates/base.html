@@ -19,7 +19,8 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
-
+    <script type="text/javascript" src="{% static 'wagtailnhsukfrontend/js/main.min.js' %}" defer></script>
+    
     {% block extra_css %}{% endblock %}
 
     {% include "wagtailnhsukfrontend/favicons.html" %}
@@ -161,9 +162,6 @@
     </div>
 
     {% footer %}
-
-    <script type="text/javascript" src="{% static 'js/nhswebsites.js' %}"></script>
-    <script type="text/javascript" src="{% static 'wagtailnhsukfrontend/js/nhsuk-3.0.2.min.js' %}" defer></script>
 
     {% block extra_js %}{% endblock %}
   </body>
