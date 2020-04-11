@@ -10,8 +10,10 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint nhswebsites/static_src/js/**",
     "lint:css": "sass-lint 'nhswebsites/static_src/scss/**/*.scss' -v -q",
+    "start": "python3 manage.py runserver",
     "watch:scss": "npm run build:css -- -w",
-    "watch:js": "webpack -w"
+    "watch:js": "npm run build:js -- -w",
+    "watch": "concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm start\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
