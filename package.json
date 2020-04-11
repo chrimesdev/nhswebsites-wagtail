@@ -1,0 +1,25 @@
+{
+  "name": "nhswebsites",
+  "version": "1.0.0",
+  "description": "NHS websites (Wagtail)",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass --output-style compressed nhswebsites/static_src/scss/main.scss nhswebsites/static/css/main.min.css",
+    "test": "npm test",
+    "watch:scss": "npm run build:css -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamChrimes/nhswebsites-wagtail.git"
+  },
+  "author": "https://github.com/AdamChrimes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamChrimes/nhswebsites-wagtail/issues"
+  },
+  "homepage": "https://github.com/AdamChrimes/nhswebsites-wagtail#readme",
+  "devDependencies": {
+    "nhsuk-frontend": "^3.0.4",
+    "node-sass": "^4.13.1"
+  }
+}
