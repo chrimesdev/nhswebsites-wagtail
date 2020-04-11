@@ -1,6 +1,12 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static wagtailcore_tags %}
+
+{% block outer_container %}
+  {% include "wagtailnhsukfrontend/hero.html" %}
+{% endblock%}
 
 {% block content %}
   {{ page.body }}
+
+  {% include "wagtailnhsukfrontend/review_date.html" %}
 {% endblock content %}
