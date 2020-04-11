@@ -3,7 +3,6 @@ from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 
 from wagtailnhsukfrontend.mixins import (
-    HeroMixin,
     ReviewDateMixin,
 )
 
@@ -26,7 +25,7 @@ from wagtailnhsukfrontend.blocks import (
     SummaryListBlock,
 )
 
-class HomePage(HeroMixin, ReviewDateMixin, Page):
+class HomePage(ReviewDateMixin, Page):
   body = StreamField([
       ('action_link', ActionLinkBlock()),
       ('care_card', CareCardBlock()),
@@ -44,7 +43,7 @@ class HomePage(HeroMixin, ReviewDateMixin, Page):
       ('summary_list', SummaryListBlock()),
   ])
 
-  content_panels = Page.content_panels + HeroMixin.content_panels + [
+  content_panels = Page.content_panels + [
       StreamFieldPanel('body'),
   ]
 
