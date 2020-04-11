@@ -1,2 +1,4 @@
 Django>=2.1,<2.2
 wagtail>=2.8,<2.9
+django-debug-toolbar==2.2
+wagtail-nhsuk-frontend==0.4.1
