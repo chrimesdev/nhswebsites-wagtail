@@ -4,6 +4,7 @@
   "description": "NHS websites (Wagtail)",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:assets",
     "build:assets": "cpx 'nhswebsites/static_src/assets/*' nhswebsites/static/assets/",
     "build:css": "node-sass --output-style compressed nhswebsites/static_src/scss/main.scss nhswebsites/static/css/main.min.css",
     "build:js": "webpack",
@@ -12,6 +13,7 @@
     "lint:js": "eslint nhswebsites/static_src/js/**",
     "lint:css": "sass-lint 'nhswebsites/static_src/scss/**/*.scss' -v -q",
     "start": "python3 manage.py runserver",
+    "prewatch": "npm run build",
     "watch:assets": "cpx 'nhswebsites/static_src/assets/*' nhswebsites/static/assets/ --watch",
     "watch:scss": "npm run build:css -- -w",
     "watch:js": "npm run build:js -- -w",
